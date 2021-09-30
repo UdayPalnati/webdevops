@@ -23,7 +23,7 @@ node("build"){
 	stage('deploy-to-nexus'){
     		println 'deploy the package to nexus'
 		sh"${tool 'maven-3.8.1'}/bin/mvn -V clean deploy -DreleaseVersion=1.0.${BUILD_NUMBER}" //this command is not deploying to nexus, install nexus and update the command to deploy
-		//sh '"/root/apache-maven-3.5.4/bin/mvn" -V clean deploy'
+		sh '"/root/apache-maven-3.5.4/bin/mvn" -V clean deploy'
 	}
 	stage('deploy-to-tomcat'){
 		println 'deploy the package to tomcat server to run application'
