@@ -26,7 +26,7 @@ node("build"){
 		//sh '"/root/apache-maven-3.5.4/bin/mvn" -V clean deploy'
 	}
 	stage('deploy-to-tomcat'){
-		//println 'deploy the package to tomcat server to run application'
+		println 'deploy the package to tomcat server to run application'
 		/*
 		sh'''
 			echo "Removing the existing package from tomcat server"
