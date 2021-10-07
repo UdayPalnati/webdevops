@@ -37,17 +37,17 @@ node("build"){
 
 		'''
 		*/
-		/*
+		
 		sh '''
 			echo Deploy the war to tomcat server.
 
 			echo Step-1: Removing the existing package
-			rm -rf /root/tomcat7/webapps/DevOpsWebApp-*.war
-			rm -rf /root/tomcat7/webapps/DevOpsWebApp-*
+			rm -rf /root/tomcat10/webapps/DevOpsWebApp-*.war
+			rm -rf /root/tomcat10/webapps/DevOpsWebApp-*
 
 			echo Step-2: Staging the new package to tomcat server.
-			cp ${WORKSPACE}/target/DevOpsWebApp-*.war /root/tomcat7/webapps
+			cp ${WORKSPACE}/target/DevOpsWebApp-*.war /root/tomcat10/webapps
 		'''
-		*/
+		
 	}
 }
