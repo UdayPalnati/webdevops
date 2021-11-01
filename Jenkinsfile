@@ -38,7 +38,7 @@ node("build"){
 		'''
 		*/
 		
-		sh '''
+		//sh '''
 			echo Deploy the war to tomcat server.
 
 			echo Step-1: Removing the existing package
@@ -50,4 +50,5 @@ node("build"){
 		'''
 		
 	}
+}
 }
