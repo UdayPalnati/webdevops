@@ -25,30 +25,6 @@ node("build"){
 		//sh"${tool 'maven-3.8.3'}/bin/mvn -V clean deploy -DreleaseVersion=1.0.${BUILD_NUMBER}" //this command is not deploying to nexus, install nexus and update the command to deploy
 		//sh '"/root/apache-maven-3.5.4/bin/mvn" -V clean deploy'
 	}
-	stage('deploy-to-tomcat'){
-		//println 'deploy the package to tomcat server to run application'
-		/*
-		//sh'''
-			echo "Removing the existing package from tomcat server"
-			ssh ec2-user@3.89.232.247 rm -rf $HOME/tomcat9/webapps/DevOpsWebApp*
+	
 			
-			echo "Deploy(copy) war to tomcat server"
-			scp target/DevOpsWebApp*.war ec2-user@3.89.232.247:$HOME/tomcat9/webapps/
-
-		'''
-		*/
-		
-		//sh '''
-			echo Deploy the war to tomcat server.
-
-			echo Step-1: Removing the existing package
-			rm -rf /root/tomcat10/webapps/DevOpsWebApp-*.war
-			rm -rf /root/tomcat10/webapps/DevOpsWebApp-*
-
-			echo Step-2: Staging the new package to tomcat server.
-			cp ${WORKSPACE}/target/DevOpsWebApp-*.war /root/tomcat10/webapps
-		'''
-		
-	}
 }
-
