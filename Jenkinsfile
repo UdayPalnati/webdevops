@@ -15,10 +15,10 @@ node("build"){
 	}
 	stage('compile'){
 		
-		//sh"${tool 'maven-3.8.3'}/bin/mvn -V clean compile -DreleaseVersion=1.0.${BUILD_NUMBER}"
+		sh"${tool 'maven-3.8.3'}/bin/mvn -V clean compile -DreleaseVersion=1.0.${BUILD_NUMBER}"
 	}
 	stage('junit test'){
-		//sh"${tool 'maven-3.8.3'}/bin/mvn -V clean test -DreleaseVersion=1.0.${BUILD_NUMBER}"
+		sh"${tool 'maven-3.8.3'}/bin/mvn -V clean test -DreleaseVersion=1.0.${BUILD_NUMBER}"
 	}
 	stage('deploy-to-nexus'){
     		//println 'deploy the package to nexus'
