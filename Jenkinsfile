@@ -28,7 +28,7 @@ node("build"){
 	stage('deploy-to-tomcat'){
 		//println 'deploy the package to tomcat server to run application'
 		/*
-		sh'''
+		//sh'''
 			echo "Removing the existing package from tomcat server"
 			ssh ec2-user@3.89.232.247 rm -rf $HOME/tomcat9/webapps/DevOpsWebApp*
 			
