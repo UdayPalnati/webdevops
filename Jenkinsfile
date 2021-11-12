@@ -26,5 +26,6 @@ node("build"){
 		//sh '"/root/apache-maven-3.8.3/bin/mvn" -V clean deploy'
 	}
 	
+	
 			
 }
