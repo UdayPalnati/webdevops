@@ -27,7 +27,7 @@ node("build"){
 	}
 	stage('deploy-to-tomcat'){
 		println 'deploy the package to tomcat server to run application'
-		/*
+		
 		sh'''
 			echo "Removing the existing package from tomcat server"
 			ssh http://172-31-33-236:rm -rf $HOME/tomcat9/webapps/DevOpsWebApp*
@@ -36,7 +36,7 @@ node("build"){
 			scp target/DevOpsWebApp*.war http://172-31-33-236:$HOME/tomcat9/webapps/
 
 		'''
-		*/
+		
 		/*
 		sh '''
 			echo Deploy the war to tomcat server.
